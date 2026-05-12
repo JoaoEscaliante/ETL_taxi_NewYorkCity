@@ -1,4 +1,4 @@
-# 🚕 NYC Yellow Taxi — ETL em Lote + Dashboard + ML
+# 🚕 NYC Yellow Taxi - ETL em Lote + Dashboard + ML
 
 Projeto de **Engenharia de Dados** com pipeline ETL em lote (batch) aplicado aos dados públicos de corridas de táxi amarelo de Nova York (março de 2016).
 
@@ -118,7 +118,7 @@ Dashboard Streamlit com filtros globais na sidebar (faixa de hora, fornecedor, t
 | 🏢 Por Fornecedor | Comparativo entre VendorID 1 e 2 |
 | 💳 Por Pagamento | Distribuição e métricas por tipo de pagamento |
 | 📅 Por Dia da Semana | Padrão semanal de corridas |
-| 📍 Mapa de Calor | Heatmap 3D de embarques em NYC via pydeck HexagonLayer — cada coluna representa a concentração de corridas naquela área; quanto mais alta e colorida, maior o volume |
+| 📍 Mapa de Calor | Heatmap 3D de embarques em NYC via pydeck HexagonLayer - cada coluna representa a concentração de corridas naquela área; quanto mais alta e colorida, maior o volume |
 | 🤖 Predição de Tarifa | Scatter real vs previsto com linha de referência diagonal, histograma de distribuição dos erros e tabela com top 100 corridas cobradas acima do esperado |
 
 ---
@@ -140,7 +140,7 @@ Dashboard Streamlit com filtros globais na sidebar (faixa de hora, fornecedor, t
 
 ## 📦 Fonte dos Dados
 
-- **Dataset:** NYC Yellow Taxi Trip Data — Março 2016
+- **Dataset:** NYC Yellow Taxi Trip Data - Março 2016
 - **Origem:** NYC Taxi & Limousine Commission (TLC)
 - **Kaggle:** https://www.kaggle.com/datasets/elemento/nyc-yellow-taxi-trip-data
 - **Registros brutos:** ~11,8 milhões
