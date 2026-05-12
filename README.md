@@ -60,10 +60,10 @@ CSV bruto → Validação → Limpeza → Transformação → Parquet → Dashbo
 
 ## ⚙️ Pipeline ETL (`testando.py`)
 
-### 1 — Extração
+### 1 - Extração:
 Leitura do arquivo `yellow_tripdata_2016-03.csv` (~11 milhões de registros) com pandas.
 
-### 2 — Validação & Detecção de Anomalias
+### 2 - Validação & Detecção de Anomalias:
 Remoção de registros com:
 - Distância inválida (`<= 0` ou `> 100` milhas)
 - Número de passageiros inválido (`<= 0` ou `> 6`)
@@ -71,7 +71,7 @@ Remoção de registros com:
 - Duração inválida (pickup posterior ao dropoff)
 - Coordenadas GPS fora do bbox de NYC
 
-### 3 — Transformação
+### 3 - Transformação:
 Criação de 7 colunas derivadas:
 
 | Coluna | Descrição |
@@ -84,10 +84,10 @@ Criação de 7 colunas derivadas:
 | `day_of_week` | Dia da semana do embarque |
 | `tip_pct` | Gorjeta como % da tarifa base |
 
-### 4 — Agregações
+### 4 - Agregações:
 Sumários por hora do dia, fornecedor, tipo de pagamento e dia da semana.
 
-### 5 — Machine Learning (Regressão Linear)
+### 5 - Machine Learning (Regressão Linear):
 Treinamento de modelo para **prever a tarifa** (`fare_amount`) antes de a corrida terminar.
 
 **Features utilizadas:**
@@ -103,7 +103,7 @@ Treinamento de modelo para **prever a tarifa** (`fare_amount`) antes de a corrid
 Métricas avaliadas: **MAE** (Erro Médio Absoluto) e **R²** (Coeficiente de Determinação).  
 Saída: colunas `predicted_fare` e `fare_difference` salvas no Parquet.
 
-### 6 — Carga
+### 6 - Carga:
 Exportação para Parquet comprimido via PyArrow (~445 MB para ~10,5 M registros limpos).
 
 ---
